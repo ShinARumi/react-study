@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script>
+        const root = document.getElementById("root");
+        const span = React.createElement("h3", {
+            id:"sexy-span", 
+            style: {color:"red"}, 
+            class:"test-class",
+            onMouseEnter: () => console.log("mouse enter")
+        }, "Hello I'm a span");
+        const btn = React.createElement("button", {
+            onClick: () => console.log("im cliked"),
+
+        }, "Click me");
+        const container = React.createElement("div", null, [span, btn]);//#2.3
+
+        ReactDOM.render(container, root);
+        //#2.4Recap
+    </script>
+</html>
